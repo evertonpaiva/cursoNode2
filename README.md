@@ -1,5 +1,5 @@
-# Node.js Parte1
+# Node.js Parte2
 
-## Inovando com JavaScript no backend
+## MVC, autenticação e autorização
 
-Repositório do curso de Node parte 1, oferecido pela Alura.
+Repositório do curso de Node parte 2, oferecido pela Alura.
