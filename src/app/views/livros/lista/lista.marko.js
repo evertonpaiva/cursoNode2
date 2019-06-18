@@ -42,7 +42,7 @@ function render(input, out, __component, component, state) {
       "\" data-type=\"remocao\">Remover</a></td> </tr>");
   });
 
-  out.w("</table> <script src=\"./remove-livro.js\">\n        </script> ");
+  out.w("</table> <script src=\"/estatico/js/remove-livro.js\"></script> ");
 
   init_components_tag({}, out);
 
