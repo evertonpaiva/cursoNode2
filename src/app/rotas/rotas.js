@@ -54,7 +54,7 @@ module.exports = (app) => {
             return resp.marko(
                 require('../views/livros/form/form.marko'),
                 {
-                    livro: {},
+                    livro: req.body,
                     errosValidacao: erros.array()
                 }
             );
