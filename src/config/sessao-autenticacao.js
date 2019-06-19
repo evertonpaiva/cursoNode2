@@ -20,7 +20,6 @@ module.exports = (app) => {
                 .then(usuario => {
                     if (!usuario || senha != usuario.senha) {
                         return done(null, false, {
-
                             mensagem: 'Login e senha incorretos!'
                         });
                     }
@@ -31,4 +30,29 @@ module.exports = (app) => {
         }
     )
     );
+
+    passport.serializeUser((usuario, done) => {
+        const usuarioSessao = {
+            nome: usuario.nome_completo,
+            email: usuario.email
+        };
+
+        done(null, usuarioSessao);
+    });
+
+    passport.deserializeUser((usuarioSessao, done) => {
+        done(null, usuarioSessao);
+    });
+
+    app.use(sessao({
+        secret: 'node alura',
+        genid: function(req) {
+            return uuid();
+        },
+        resave: false,
+        saveUninitialized: false
+    }));
+
+    app.use(passport.initialize());
+    app.use(passport.session());
 };
