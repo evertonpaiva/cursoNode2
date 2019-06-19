@@ -63,7 +63,7 @@ class LivroControlador {
 
             if (!erros.isEmpty()) {
                 return resp.marko(
-                    templates.livros.form,
+                    require('../views/livros/form/form.marko'), 
                     { 
                         livro: req.body, 
                         errosValidacao: erros.array()
