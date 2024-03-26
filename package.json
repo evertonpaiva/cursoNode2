@@ -19,7 +19,7 @@
   "homepage": "https://github.com/evertonpaiva/cursoNode1#readme",
   "dependencies": {
     "body-parser": "1.18.3",
-    "express": "4.16.3",
+    "express": "4.19.2",
     "express-session": "1.15.6",
     "express-validator": "5.3.1",
     "marko": "4.13.4-1",
